@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>RoutineMark</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface": "#fbf8fc", "secondary-fixed": "#7ffc97", "secondary-container": "#7cf994", "primary-fixed-dim": "#b4c5ff", "primary-container": "#2563eb", "on-secondary-fixed-variant": "#005320", "on-tertiary-fixed": "#410002", "on-background": "#1b1b1e", "surface-container": "#f0edf1", "surface-container-low": "#f6f2f7", "primary-fixed": "#dbe1ff", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#ffb4ab", "on-surface-variant": "#434655", "secondary": "#006e2d", "surface-variant": "#e4e1e6", "on-error-container": "#93000a", "on-tertiary-container": "#ffecea", "tertiary-container": "#d52022", "on-error": "#ffffff", "error-container": "#ffdad6", "inverse-primary": "#b4c5ff", "on-primary": "#ffffff", "inverse-on-surface": "#f3f0f4", "outline-variant": "#c3c6d7", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#93000b", "error": "#ba1a1a", "inverse-surface": "#303033", "outline": "#737686", "surface-container-highest": "#e4e1e6", "on-tertiary": "#ffffff", "on-secondary-fixed": "#002109", "tertiary-fixed": "#ffdad6", "secondary-fixed-dim": "#62df7d", "surface-tint": "#0053db", "on-primary-fixed-variant": "#003ea8", "surface-container-high": "#eae7eb", "on-secondary-container": "#007230", "tertiary": "#ae0010", "surface-bright": "#fbf8fc", "on-primary-fixed": "#00174b", "background": "#fbf8fc", "surface-dim": "#dcd9dd", "primary": "#004ac6", "on-surface": "#1b1b1e", "on-primary-container": "#eeefff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xl": "1.5rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "space-md": "0.75rem", "margin-desktop": "2rem", "space-lg": "1rem", "margin-tablet": "1.5rem", "space-xs": "0.25rem" }, fontFamily: { "label-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "display-lg-mobile": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Inter"], "metric-num": ["Inter"] }, fontSize: { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "display-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "metric-num": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.025em", "fontWeight": "700" }] } } } };</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100%; } body { overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased flex flex-col min-h-full selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="max-w-md mx-auto h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="RoutineMark Icon" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WMZfryiyM-mzvMGcdnP7ucvBeRT0Tbr0JgqxGNES8yuV-c3HR7yjLawaAwCo9KqWE0UVh-4MI2D2jx6VE9TxouH1F-SrAcqQuRoKa8qSpzaIlc-sr_sCumf51iw1sWT4hiC32O_QjZgS7BIxse6Xtff3JJx_0-PNHlPwhYhU8yQWn5RW_kyV5j7Dy6OJEhjO9n7fk93gia6rdP9NkZHPWrgT5WXb6LaMYinZThz5jPmEiO_VsBtTVy-fc"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">RoutineMark</span><span class="font-label-sm text-label-sm text-on-surface-variant">Today</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Toggle appearance mode" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" onclick="document.documentElement.classList.toggle('dark')" type="button"><span class="material-symbols-outlined text-[20px]">contrast</span></button><button aria-label="Settings and profile" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" type="button"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 w-full max-w-md mx-auto pt-16 pb-24 bg-surface px-margin"><div class="flex flex-col w-full pb-6 space-y-4">
+<!-- State Simulator Bar (Ergonomic, discreet pill switches) -->
+<div class="w-full bg-surface-container-low rounded-xl p-1.5 flex items-center justify-between gap-1 shadow-sm">
+<button class="flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface shadow-sm font-semibold" id="btn-state-default" onclick="setDashboardState('default')" type="button">
+      Default
+    </button>
+<button class="flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" id="btn-state-completed" onclick="setDashboardState('completed')" type="button">
+      Completed
+    </button>
+<button class="flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" id="btn-state-loading" onclick="setDashboardState('loading')" type="button">
+      Loading
+    </button>
+<button class="flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface" id="btn-state-empty" onclick="setDashboardState('empty')" type="button">
+      Empty
+    </button>
+</div>
+<!-- Loading State Skeleton Box (Hidden by default) -->
+<div class="hidden flex-col w-full space-y-4 animate-pulse" id="state-loading-view">
+<div class="h-20 bg-surface-container-high rounded-xl w-full"></div>
+<div class="h-64 bg-surface-container-high rounded-xl w-full"></div>
+<div class="h-52 bg-surface-container-high rounded-xl w-full"></div>
+</div>
+<!-- Empty Program State (Hidden by default) -->
+<div class="hidden flex-col w-full bg-surface-container-lowest rounded-xl p-6 text-center space-y-3 shadow-sm" id="state-empty-view">
+<div class="w-12 h-12 rounded-full bg-surface-container mx-auto flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[26px]">calendar_today</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">No Scheduled Workout</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Today is allocated as an active recovery day or your program cycle has concluded.</p>
+</div>
+<div class="pt-2">
+<button class="w-full h-12 bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:opacity-90" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+        Build Custom Routine
+      </button>
+</div>
+</div>
+<!-- Main Active Content Canvas -->
+<div class="flex flex-col w-full space-y-4" id="state-main-content">
+<!-- 1. Header Greeting & Current Program Context -->
+<div class="flex flex-col space-y-2">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Tuesday, Oct 24</span>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Good morning, Alex</h1>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Active Cycle</span>
+</div>
+</div>
+<!-- Training Program Badge Card -->
+<div class="bg-surface-container-low rounded-xl px-3.5 py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Upper / Lower Hypertrophy</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">Week 3 of 8</span>
+</div>
+</div>
+<!-- 2. Primary Workout Telemetry Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-4 relative overflow-hidden">
+<!-- Card Header -->
+<div class="flex items-start justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Session Target</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Upper Body Strength A</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">5 compound exercises • ~45 min estimated</p>
+</div>
+<div class="px-2.5 py-1 bg-surface-container rounded-full text-on-surface-variant font-label-sm text-label-sm font-semibold" id="workout-status-badge">
+          Not Started
+        </div>
+</div>
+<!-- Target Muscle Chips -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Chest</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Upper Back</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Deltoids</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface">Triceps</span>
+</div>
+<!-- Exercise Quick List -->
+<div class="bg-surface-container-low rounded-xl p-3 space-y-2">
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">1. Bench Press</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 6 reps</span>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">2. Barbell Bent Row</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 8 reps</span>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">3. Standing Overhead Press</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 8 reps</span>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">4. Incline DB Bicep Curl</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 12 reps</span>
+</div>
+<div class="w-full h-px bg-surface-container"></div>
+<div class="flex items-center justify-between font-body-sm text-body-sm">
+<span class="font-semibold text-on-surface">5. Cable Tricep Pushdown</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 15 reps</span>
+</div>
+</div>
+<!-- Primary Execution CTA -->
+<button class="w-full h-[52px] bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-transform" id="workout-primary-btn" onclick="toggleWorkoutComplete()" type="button">
+<span class="material-symbols-outlined text-[22px]" id="workout-btn-icon">play_arrow</span>
+<span id="workout-btn-text">Start Workout Session</span>
+</button>
+</div>
+<!-- 3. Daily Discipline Tracker (Habits & 75-Day Standard) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3.5">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Standard Protocol</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">75-Day Regimen</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-1 rounded-full font-semibold">Day 22 of 75</span>
+</div>
+<!-- Linear Metric Meter -->
+<div class="space-y-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold" id="habit-count-label">3 of 5 Completed</span>
+<span class="text-on-surface-variant" id="habit-pct-label">60%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full transition-all duration-300" id="habit-progress-bar" style="width: 60%"></div>
+</div>
+</div>
+<!-- Ergonomic Habit Affirmation List (Minimum 48px tactile hit area) -->
+<div class="space-y-2 pt-1">
+<!-- Habit Item 1 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low min-h-[48px]">
+<div class="flex items-center gap-3">
+<button class="habit-check-btn w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center transition-colors" onclick="toggleHabit(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-medium">Morning Hydration (1.0 L)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Logged</span>
+</div>
+<!-- Habit Item 2 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low min-h-[48px]">
+<div class="flex items-center gap-3">
+<button class="habit-check-btn w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center transition-colors" onclick="toggleHabit(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-medium">45 Min Structured Session</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active</span>
+</div>
+<!-- Habit Item 3 -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low min-h-[48px]">
+<div class="flex items-center gap-3">
+<button class="habit-check-btn w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center transition-colors" onclick="toggleHabit(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-medium">10,000 Step Benchmark</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">8,420</span>
+</div>
+<!-- Habit Item 4 (Unchecked) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low min-h-[48px]">
+<div class="flex items-center gap-3">
+<button class="habit-check-btn w-8 h-8 rounded-lg bg-surface-container text-transparent flex items-center justify-center transition-colors hover:bg-surface-variant" onclick="toggleHabit(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-medium">Read 10 Pages (Physical)</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+<!-- Habit Item 5 (Unchecked) -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low min-h-[48px]">
+<div class="flex items-center gap-3">
+<button class="habit-check-btn w-8 h-8 rounded-lg bg-surface-container text-transparent flex items-center justify-center transition-colors hover:bg-surface-variant" onclick="toggleHabit(this)" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</button>
+<span class="font-body-md text-body-md text-on-surface font-medium">Strict Whole Food Protocol</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pending</span>
+</div>
+</div>
+<a class="w-full min-h-[48px] flex items-center justify-between px-3 py-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors" href="#">
+<span class="font-label-md text-label-md font-semibold">Open Consistency Ledger &amp; 75-Day Grid</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4. Tactical Coach Telemetry Insight -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3 relative">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">insights</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Coach Signal</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Objective Logic</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+        You logged a volume personal record on Bench Press last cycle (+4.2%). Recovery score is at 91 today. Target <span class="font-semibold text-primary-container">185 lbs × 6</span> on set 1 if warmup bar speed remains steady.
+      </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold transition-colors" onclick="this.closest('.bg-surface-container-lowest').classList.add('opacity-60')" type="button">
+          Acknowledged
+        </button>
+<button class="h-10 px-4 rounded-lg bg-transparent text-primary-container hover:bg-surface-container-low font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1" type="button">
+<span>Detailed Breakdown</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- 5. Component Action Spectrum System (Demonstration Drawer) -->
+<div class="bg-surface-container-low rounded-xl p-4 space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Design System Controls</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Production Spec</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Primary Interaction -->
+<button class="h-12 w-full rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:bg-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Primary</span>
+</button>
+<!-- Subdued Secondary -->
+<button class="h-12 w-full rounded-lg bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span>Secondary</span>
+</button>
+<!-- Deterministic Completion -->
+<button class="h-12 w-full rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Complete</span>
+</button>
+<!-- Destructive Protocol -->
+<button class="h-12 w-full rounded-lg bg-tertiary text-on-tertiary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span>Discard</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function setDashboardState(state) {
+    const mainContent = document.getElementById('state-main-content');
+    const loadingView = document.getElementById('state-loading-view');
+    const emptyView = document.getElementById('state-empty-view');
+    const buttons = ['default', 'completed', 'loading', 'empty'];
+
+    buttons.forEach(function(s) {
+      const btn = document.getElementById('btn-state-' + s);
+      if (s === state) {
+        btn.className = 'flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all bg-surface-container-lowest text-on-surface shadow-sm font-semibold';
+      } else {
+        btn.className = 'flex-1 py-1.5 px-2 text-center rounded-lg font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-on-surface';
+      }
+    });
+
+    if (state === 'loading') {
+      mainContent.classList.add('hidden');
+      emptyView.classList.add('hidden');
+      loadingView.classList.remove('hidden');
+      loadingView.classList.add('flex');
+    } else if (state === 'empty') {
+      mainContent.classList.add('hidden');
+      loadingView.classList.add('hidden');
+      emptyView.classList.remove('hidden');
+      emptyView.classList.add('flex');
+    } else if (state === 'completed') {
+      loadingView.classList.add('hidden');
+      emptyView.classList.add('hidden');
+      mainContent.classList.remove('hidden');
+      applyCompletedState(true);
+    } else {
+      loadingView.classList.add('hidden');
+      emptyView.classList.add('hidden');
+      mainContent.classList.remove('hidden');
+      applyCompletedState(false);
+    }
+  }
+
+  function applyCompletedState(isCompleted) {
+    const badge = document.getElementById('workout-status-badge');
+    const btn = document.getElementById('workout-primary-btn');
+    const btnText = document.getElementById('workout-btn-text');
+    const btnIcon = document.getElementById('workout-btn-icon');
+
+    if (isCompleted) {
+      badge.textContent = 'Completed';
+      badge.className = 'px-2.5 py-1 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm font-semibold';
+      btn.className = 'w-full h-[52px] bg-secondary text-on-secondary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-transform';
+      btnText.textContent = 'View Telemetry & Results';
+      btnIcon.textContent = 'analytics';
+    } else {
+      badge.textContent = 'Not Started';
+      badge.className = 'px-2.5 py-1 bg-surface-container rounded-full text-on-surface-variant font-label-sm text-label-sm font-semibold';
+      btn.className = 'w-full h-[52px] bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-sm transition-transform';
+      btnText.textContent = 'Start Workout Session';
+      btnIcon.textContent = 'play_arrow';
+    }
+  }
+
+  function toggleWorkoutComplete() {
+    const badge = document.getElementById('workout-status-badge');
+    const isNowCompleted = badge.textContent.trim() !== 'Completed';
+    applyCompletedState(isNowCompleted);
+  }
+
+  function toggleHabit(button) {
+    const isCompleted = button.classList.contains('bg-secondary');
+    if (isCompleted) {
+      button.classList.remove('bg-secondary', 'text-on-secondary');
+      button.classList.add('bg-surface-container', 'text-transparent');
+    } else {
+      button.classList.remove('bg-surface-container', 'text-transparent');
+      button.classList.add('bg-secondary', 'text-on-secondary');
+    }
+    updateHabitMetrics();
+  }
+
+  function updateHabitMetrics() {
+    const habitButtons = document.querySelectorAll('.habit-check-btn');
+    let completedCount = 0;
+    habitButtons.forEach(function(b) {
+      if (b.classList.contains('bg-secondary')) {
+        completedCount++;
+      }
+    });
+    const total = habitButtons.length;
+    const pct = Math.round((completedCount / total) * 100);
+
+    const countLabel = document.getElementById('habit-count-label');
+    const pctLabel = document.getElementById('habit-pct-label');
+    const progressBar = document.getElementById('habit-progress-bar');
+
+    if (countLabel) countLabel.textContent = completedCount + ' of ' + total + ' Completed';
+    if (pctLabel) pctLabel.textContent = pct + '%';
+    if (progressBar) progressBar.style.width = pct + '%';
+  }
+</script></main><nav class="fixed bottom-0 left-0 right-0 z-50 pb-safe bg-surface/80 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-semibold"><div class="max-w-md mx-auto h-16 flex items-stretch"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center gap-0.5 transition-colors min-w-[48px] min-h-[48px] text-primary-container font-semibold" data-path="today" href="#"><span class="material-symbols-outlined text-[22px]">event_available</span><span class="font-label-sm text-label-sm">Today</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors min-w-[48px] min-h-[48px]" data-path="workout" href="#"><span class="material-symbols-outlined text-[22px]">fitness_center</span><span class="font-label-sm text-label-sm">Workout</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors min-w-[48px] min-h-[48px]" data-path="habits" href="#"><span class="material-symbols-outlined text-[22px]">task_alt</span><span class="font-label-sm text-label-sm">Habits</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors min-w-[48px] min-h-[48px]" data-path="progress" href="#"><span class="material-symbols-outlined text-[22px]">trending_up</span><span class="font-label-sm text-label-sm">Progress</span></a><a class="flex-1 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors min-w-[48px] min-h-[48px]" data-path="coach" href="#"><span class="material-symbols-outlined text-[22px]">support_agent</span><span class="font-label-sm text-label-sm">Coach</span></a></div></nav></body></html>
